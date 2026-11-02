@@ -1,0 +1,88 @@
+[
+  {
+    "id": "eshon-29",
+    "stop_id": "1889234811",
+    "label": "Eshon Boboxonov ko'chasi",
+    "page_stop_name": "Улица Эшона Бабаханова",
+    "url": "https://yandex.uz/maps/10335/tashkent/stops/1889234811/?ll=69.199002%2C41.340684&tab=overview&z=15.74",
+    "buses": [
+      {
+        "route": "29",
+        "destination": "Пахтакор",
+        "direction_label": "Metro Paxtakor"
+      }
+    ]
+  },
+  {
+    "id": "markaziy-telegraf",
+    "stop_id": "1543141376",
+    "label": "Markaziy telegraf",
+    "page_stop_name": "Центральный телеграф",
+    "url": "https://yandex.uz/maps/10335/tashkent/stops/1543141376/?ll=69.249740%2C41.320595&tab=overview&z=17.6",
+    "buses": [
+      {
+        "route": "35",
+        "destination": "Улица Мукаррам Тургунбаевой",
+        "direction_label": "Mukarram Turg'unboyeva ko'chasi"
+      },
+      {
+        "route": "152",
+        "destination": "Финансовый лицей",
+        "direction_label": "Moliya litseyi"
+      }
+    ]
+  },
+  {
+    "id": "kokaldosh-madrasasi",
+    "stop_id": "1719125260",
+    "label": "Ko'kaldosh madrasasi",
+    "page_stop_name": "Медресе Кукельдаш",
+    "url": "https://yandex.uz/maps/10335/tashkent/stops/1719125260/?indoorLevel=1&ll=69.237713%2C41.323667&tab=overview&z=16.83",
+    "buses": [
+      {
+        "route": "11",
+        "destination": "Массив Белтепа",
+        "direction_label": "Beltepa massivi"
+      },
+      {
+        "route": "28",
+        "destination": "Микрорайон Янгиабад",
+        "direction_label": "Yangiobod mavzesi"
+      },
+      {
+        "route": "29",
+        "destination": "Метро Пахтакор",
+        "direction_label": "Metro Paxtakor"
+      },
+      {
+        "route": "64",
+        "destination": "Массив Бирлик",
+        "direction_label": "Birlik massivi"
+      },
+      {
+        "route": "147",
+        "destination": "Посудный рынок",
+        "direction_label": "Chinni bozori"
+      }
+    ]
+  },
+  {
+    "id": "bahor-kochasi",
+    "stop_id": "1889222541",
+    "label": "Bahor ko'chasi",
+    "page_stop_name": "Улица Бахор",
+    "url": "https://yandex.uz/maps/10335/tashkent/stops/1889222541/?ll=69.265042%2C41.333985&tab=overview&z=16.27",
+    "buses": [
+      {
+        "route": "35",
+        "destination": "Детская инфекционная больница № 5",
+        "direction_label": "5-son bolalar yuqumli kasalliklar shifoxonasi"
+      },
+      {
+        "route": "152",
+        "destination": "ТЦ Чорсу",
+        "direction_label": "Chorsu savdo markazi"
+      }
+    ]
+  }
+]

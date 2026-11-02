@@ -1,0 +1,34 @@
+"""Small, readable notification texts."""
+from __future__ import annotations
+
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+
+TZ = ZoneInfo("Asia/Tashkent")
+
+
+def format_report(stop: dict[str, str], payload: dict, now: datetime | None = None) -> str:
+    now = (now or datetime.now(TZ)).astimezone(TZ)
+    status = payload.get("status", "error")
+    heading = f"🚌 {stop['route']} → {stop['direction_label']}\n📍 {stop['label']}"
+    details = {
+        "ok": f"⏱ {payload.get('eta') or 'ETA hozircha yo‘q'}",
+        "no_eta": "⏳ ETA hozircha mavjud emas",
+        "starting": "🔄 Prognoz yuklanmoqda...",
+        "captcha": "⚠️ Yandex robot tekshiruvini so‘rayapti. Monitoring kutmoqda.",
+        "limited": "⚠️ Yandex sahifani chekladi (limited). 5 daqiqa tanaffus.",
+        "wrong_page": "⚠️ Bekat sahifasi yuklanmadi. Qayta tekshiriladi.",
+        "error": "⚠️ Monitoring xatosi. Qayta ulanmoqda.",
+        "idle": "⛔ Monitoring kutilmaganda to‘xtagan. Qayta boshlang.",
+    }
+    detail = details.get(status, "⚠️ Noma’lum holat")
+    checked = payload.get("checked_at")
+    if checked and status in {"ok", "no_eta"}:
+        try:
+            last = datetime.fromisoformat(checked).astimezone(TZ)
+            age = (now - last).total_seconds()
+            if age > 120:
+                detail = "⚠️ Oxirgi ETA eskirgan. Yangilanish kutilmoqda."
+        except (ValueError, TypeError):
+            pass
+    return f"{heading}\n{detail}\n🕒 {now:%H:%M}"
